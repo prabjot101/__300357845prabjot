@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form method="post" th:action="@{reg}">
+  <label>Transaction Number </label><hr>
+  <input class= type="long" name = "id" th:value="${salesman.id}"><hr>
+
+  <label>Date of Transaction</label><hr>
+  <input type="date" name="date" th:value="${salesman.dot}"><hr>
+
+  <label>Salesman</label><hr>
+  <input type="text" name="name" th:value="${salesman.name}"><hr>
+
+  <label>Amount</label><hr>
+  <input type="double" name="amount" th:value="${salesman.amount}"><hr>
+
+  <label>Item Type</label><hr>
+  <input type="string" name="item" th:value="${salesman.item}"><hr>
+
+
+  <button class="btn btn-danger" onClick="return confirm('Are you sure you want to save the record ?')" type="submit" th:href="@{/index}">Save</button>
+
+</form>
+</body>
+</html>
